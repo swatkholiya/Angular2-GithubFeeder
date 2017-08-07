@@ -9,7 +9,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { GithubUserService } from './github-user.service';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserRepositoryComponent } from './user-repository/user-repository.component';
-import {DefinedConstants} from '../defined-constants';
+import {DefinedConstants} from '../app.defined.constants';
+import { AppRoutingModule} from '../app.routing.module';
 
 
 const appRoutes: Routes = [
@@ -17,20 +18,20 @@ const appRoutes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'Aboutus', component: AboutUsComponent },
   { path: 'UserDetails/:name' , component : UserDetailsComponent} ,
-  { path: 'UserRepo/:name' , component : UserRepositoryComponent },  
+  { path: 'UserRepo/:name' , component : UserRepositoryComponent }
 ];
 
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, AboutUsComponent, AboutUsComponent,UserDetailsComponent, UserRepositoryComponent
+    AppComponent, HomeComponent, AboutUsComponent, AboutUsComponent,UserDetailsComponent, UserRepositoryComponent 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
-  ],
+     AppRoutingModule
+    ],
   providers: [GithubUserService , DefinedConstants],
   bootstrap: [AppComponent]
 })

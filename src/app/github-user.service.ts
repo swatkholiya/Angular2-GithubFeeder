@@ -1,7 +1,7 @@
 import { Injectable , Component } from '@angular/core';
 import { Http , Response } from '@angular/http';
 import 'rxjs/add/operator/map';
-import {DefinedConstants} from '../defined-constants';
+import {DefinedConstants} from '../app.defined.constants';
 
 @Injectable()
 export class GithubUserService {
