@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {GithubUserService} from './../github-user.service';
+import { GithubUserService } from './../github-user.service';
 import { Observable } from 'rxjs/Observable';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +11,15 @@ import {Router} from '@angular/router';
 export class HomeComponent implements OnInit {
   users: Observable<any>;
 
-  constructor(private _githubUserService : GithubUserService , private router : Router) { }
+  constructor(private _githubUserService: GithubUserService, private router: Router) { }
 
   ngOnInit() {
-    this._githubUserService.getUsers()
-    .subscribe(   users => this.users = users);
-    console.log("inside home");
-   }
+    this.initializeUsers();
+  }
+
+  initializeUsers(){
+     this._githubUserService.getUsers()
+      .subscribe(users => this.users = users);
+  }
 
 }

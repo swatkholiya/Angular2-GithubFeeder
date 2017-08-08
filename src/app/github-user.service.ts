@@ -6,7 +6,7 @@ import {DefinedConstants} from '../app.defined.constants';
 @Injectable()
 export class GithubUserService {
 
-  private _usersurl : string = this.definedConsts.getGithubUsersEndpoint();
+  private _usersurl : string = this.definedConsts.GITHUB_USER_ENDPOINT;
   
   constructor(private _http: Http , private definedConsts : DefinedConstants) { console.log("url = "+this._usersurl)}
   

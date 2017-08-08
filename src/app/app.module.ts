@@ -13,15 +13,6 @@ import {DefinedConstants} from '../app.defined.constants';
 import { AppRoutingModule} from '../app.routing.module';
 
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'Home', component: HomeComponent },
-  { path: 'Aboutus', component: AboutUsComponent },
-  { path: 'UserDetails/:name' , component : UserDetailsComponent} ,
-  { path: 'UserRepo/:name' , component : UserRepositoryComponent }
-];
-
-
 @NgModule({
   declarations: [
     AppComponent, HomeComponent, AboutUsComponent, AboutUsComponent,UserDetailsComponent, UserRepositoryComponent 
@@ -35,4 +26,5 @@ const appRoutes: Routes = [
   providers: [GithubUserService , DefinedConstants],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
