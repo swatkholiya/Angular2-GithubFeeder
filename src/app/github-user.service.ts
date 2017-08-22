@@ -1,14 +1,14 @@
 import { Injectable , Component } from '@angular/core';
 import { Http , Response } from '@angular/http';
 import 'rxjs/add/operator/map';
-import {DefinedConstants} from '../app.defined.constants';
+import {DefinedConstants} from '../app/app.defined.constants';
 
 @Injectable()
 export class GithubUserService {
 
   private _usersurl : string = this.definedConsts.GITHUB_USER_ENDPOINT;
   
-  constructor(private _http: Http , private definedConsts : DefinedConstants) { console.log("url = "+this._usersurl)}
+  constructor(private _http: Http , private definedConsts : DefinedConstants) { console.log("service constructor....")}
   
   getUsers(){
     return this._http.get(this._usersurl)

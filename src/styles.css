@@ -3,4 +3,52 @@ body{
     background-color: lightcyan;
 } 
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+.header, .content, .footer {
+  display: table-row;
+}
+
+.header, .footer {
+  background-color : lightgrey;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  }
+
+.inner {
+  display: table-cell;
+}
+.content .inner {
+  height: 100%;
+  position: relative;
+  
+}
+
+.scrollable {
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  overflow: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+ .text-centre{
+     text-align: center;
+ }
+
+ a:hover{
+     color: aqua;
+ }
 

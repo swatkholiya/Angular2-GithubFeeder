@@ -1,13 +1,15 @@
 <div class="card">
   <div class="container">
 
-    <ul id="userheader">
-      <li><img class="img-circle" src={{userDetails.avatar_url}}></li>
-      <li><B>{{userDetails.name}}</B></li>
-    </ul>
-
-
     <table>
+      <tr>
+        <td><img class="img-circle" src={{userDetails.avatar_url}}></td>
+         <td><B><h2>{{userDetails.name}}</h2></B></td>
+      </tr>
+    </table>
+
+
+    <table class="user-details-table">
       <tr>
         <td>
           <B>Username</B>
@@ -26,7 +28,9 @@
         <td>
           <B>Company</B>
         </td>
-        <td>{{userDetails.company}}</td>
+        <td>
+          {{userDetails.company == null?"-":userDetails.company}}
+        <td>
       </tr>
 
       <tr>
@@ -37,7 +41,7 @@
       </tr>
     </table>
 
-    <table>
+    <table  class="user-details-table">
       
       <tr>
         <td class="one">{{userDetails.public_repos}} Public Repos</td>
@@ -47,7 +51,7 @@
 
     </table>
 
-    <div class="center">
+    <div>
       <button class="view-user-repo-button" (click)="viewRepoByUserName(userDetails.login)">VIEW REPO</button>
     </div>
   </div>

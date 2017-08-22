@@ -9,12 +9,12 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { GithubUserService } from './github-user.service';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserRepositoryComponent } from './user-repository/user-repository.component';
-import {DefinedConstants} from '../app.defined.constants';
-import { AppRoutingModule} from '../app.routing.module';
+import {DefinedConstants} from './app.defined.constants';
+import { AppRoutingModule} from './app.routing.module';
 
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent, HomeComponent, AboutUsComponent, AboutUsComponent,UserDetailsComponent, UserRepositoryComponent 
   ],
   imports: [

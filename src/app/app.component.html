@@ -1,10 +1,29 @@
-<div class="nav">
-  <a [routerLink]="['/Home']">Home</a>
-  <a [routerLink]="['/Aboutus']">About us</a>
-</div>
+<div class="wrapper">
+  <div class="header">
+    <div class="inner">
+      <table class="center">
+        <tr>
+          <td><a [routerLink]="['/Home']">Home</a></td>
+          <td></td>
+          <td><a [routerLink]="['/Aboutus']">About us</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
-<div class="content">
-  <router-outlet></router-outlet>
-</div>
 
-<footer>Copyright &copy; Clairvoyant.com</footer>
+  <div class="content">
+    <div class="inner">
+      <div class="scrollable">
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="inner">Copyright &copy; Clairvoyant.com</div>
+  </div>
+</div>

@@ -1,9 +1,12 @@
-<h2>GitHub Users List</h2>
+<h2 class="text-centre">Github Users</h2>
+
 
 <div *ngFor="let user of users; let currentElementIndex=index" class="card" >
     <div class="container">
-         <img class="img-circle" src={{user.avatar_url}}  width="42" height="42">
-         <a [routerLink]="['/UserDetails', user.login]"> {{user.login}} </a>
+            <img class="img-circle" src={{user.avatar_url}} >
+         <a [routerLink]="['/UserDetails', user.login]">{{user.login}} </a>
     </div>    
 </div>
+
+
 

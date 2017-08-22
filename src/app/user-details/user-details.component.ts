@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GithubUserService } from './../github-user.service';
 
@@ -8,14 +8,17 @@ import { GithubUserService } from './../github-user.service';
   templateUrl: './user-details.component.html',
   styleUrls: ['./user-details.component.css']
 })
-export class UserDetailsComponent implements OnInit {
+export class UserDetailsComponent implements OnInit ,OnDestroy {
 
   name: string;
   userDetails: any = {};
 
-  constructor(private activatedRouteService: ActivatedRoute, private githubusersService: GithubUserService, private routerService: Router) { }
+  constructor(private activatedRouteService: ActivatedRoute, private githubusersService: GithubUserService, private routerService: Router) {
+    console.log("Userdetails constructor clled...");
+   }
 
   ngOnInit() {
+    console.log("User details ngonit clled...");
     this.initializeUserDetails();
   }
 
@@ -29,5 +32,9 @@ export class UserDetailsComponent implements OnInit {
   viewRepoByUserName(name) {
     this.routerService.navigate(['UserRepo', name]);
   }
+
+ngOnDestroy(){
+console.log("Destroed userdetail");
+}
 
 }
